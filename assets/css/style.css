@@ -1,0 +1,160 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+nav {
+    padding: 10px;
+    grid-area: menu;
+    background: #6750A4;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.uno {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.filtro-busqueda {
+    grid-area: filtro;
+    background: #EADDFF;
+    color: #6750A4;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+main {
+    grid-area: seccion-principal;
+    padding: 10px;
+    background-color: #625B71;
+}
+footer {
+    grid-area: pie-de-pagina;
+    background: #E8DEF8;
+    color: #6750A4;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    border: 1px solid black;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        "menu"
+        "filtro"
+        "seccion-principal"
+        "pie-de-pagina";
+}
+.bg {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-end;
+    overflow:hidden;
+}
+
+.text-card {
+    background: #E8DEF8;
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    padding: 2px;
+}
+button {
+    padding: 5px;
+}
+.imagen1 {
+    grid-area: a;
+    background-image: url(../images/caja-bateria.jpg);
+    
+}
+.imagen2 {
+    grid-area: b;
+    background-image: url(../images/caja-bateria.jpg);
+}
+.imagen3 {
+    grid-area: c;
+    background-image: url(../images/caja-bateria.jpg);
+}
+.imagen4 {
+    grid-area: d;
+    background-image: url(../images/caja-bateria.jpg);
+}
+.imagen5 {
+    grid-area: e;
+    background-image: url(../images/caja-bateria.jpg);
+}
+.imagen6 {
+    grid-area: f;
+    background-image: url(../images/caja-bateria.jpg);
+}
+.imagen7 {
+    grid-area: g;
+    background-image: url(../images/caja-bateria.jpg);
+}
+.imagen8 {
+    grid-area: h;
+    background-image: url(../images/caja-bateria.jpg);
+}
+.gallery {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "a";
+    
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    overflow: hidden;
+}
+
+.ocultar {
+    display: none;
+}
+@media (min-width: 992px) {
+    .grid-container {
+        grid-template-areas: 
+            "menu filtro"
+            "menu seccion-principal"
+            "menu seccion-principal"
+            "menu pie-de-pagina";
+        grid-template-columns: 1fr 10fr;
+    }
+    .gallery{
+        grid-template-areas: 
+        "a b c d "
+        "e f g h";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row: 1fr 1fr;
+        gap: 10px;
+    }
+    .ocultar {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .dos {
+        display: none;
+    }
+    .uno  {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .uno p {
+        text-align: center;
+        font-size: 2em;
+    }
+    
+    .fa-drum {
+        font-size: 3em;
+        margin-bottom: 5px;
+    }
+
+}
